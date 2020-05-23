@@ -2,6 +2,7 @@
 // get request parameter
 $id = $_GET["id"];
 
+// set session start
 session_start();
 
 // retrieve xml database
@@ -10,6 +11,7 @@ foreach ($xml->children() as $cars) {
     if (($id == $cars->id) && ("Y" == $cars->Availability)){
         // add item to shopping cart
         $car_detail = array(
+            "RentalDays" => 1,
             "Mileage" => (string) $cars->Mileage,
             "FuelType" => (string) $cars->FuelType,
             "Seats" => (string) $cars->Seats,
@@ -17,9 +19,9 @@ foreach ($xml->children() as $cars) {
             "Brand" => (string) $cars->Brand,
             "Model" => (string) $cars->Model,
             "Year" => (string) $cars->Year,
-            "PricePerDay" => (int) $cars->PricePerDay,
-            "RentalDays" => 1
+            "PricePerDay" => (int) $cars->PricePerDay
         );
+        // store into session variable if available
         if (!isset($_SESSION["cart"])) {
             $_SESSION["cart"] = array($id => $car_detail);
         } else if (!isset($_SESSION["cart"][$id])) {

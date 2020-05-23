@@ -32,7 +32,8 @@ $_SESSION["total"]=$total;
     <div class="container mx-4">
         <h3>Customer Details and Payment</h3>
         <p class="text-info">Please fill in your details. <span style="color: red;">*</span> indicates  field</p>
-        <form name="purchaseForm" method="post" action="purchase.php">
+
+        <form name="purchaseForm" method="post" action="car_email.php">
         <div class="form-group row">
             <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
             <div class="col-sm-10">
@@ -103,7 +104,7 @@ $_SESSION["total"]=$total;
         <h3>You are  to pay $<?php echo $total;?></h3>
         <div class="form-group row">
             <div class="col-sm-12 text-right">
-                <a href="../product/car_rental_center.html" target="mainFrame" class="btn btn-primary">Continue Selection</a>
+                <a href="car_show.php" target="mainFrame" class="btn btn-primary">Continue Selection</a>
                 <button type="submit" class="btn btn-primary">Booking</button>
             </div>
         </div>

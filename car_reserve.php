@@ -11,12 +11,12 @@
     session_start();
     if (empty($_SESSION["cart"])){
         echo '<div class="container text-center">';
-        echo '<h2>No items. Please select cars</h2>';
+        echo '<h2>The cart is empty. Please select cars to book.</h2>';
         echo '<a href="car_show.php" target="mainFrame" class="btn btn-primary">Back to Home</a></div>';
     }else{
         echo '<form id="checkoutForm" method="post" action="car_checkout.php">';
         echo '<div class="container">
-            <table class="table">
+                <table class="table table-striped">
                 <thead class="thead-light">
                 <tr>
                     <th scope="col">Thumbnail</th>
@@ -32,7 +32,7 @@
                 echo '<tr>';
                 echo '<td class="align-middle" scope="row"><img style="width: 70px; height: 70px;" class="img-thumbnail" src="static/Images/'.$item["Model"].'.jpg"></td>';
                 echo '<td class="align-middle" class="align-middle">'.$item["Year"].'-'.$item["Brand"].'-'.$item["Model"].'</td>';
-                echo '<td class="align-middle">'.$item["PricePerDay"].'</td>';
+                echo '<td class="align-middle">$'.$item["PricePerDay"].'</td>';
                 echo '<td class="align-middle"><input name="rentalDays[]" type="number" required max="300" min="1" value="'.$item["RentalDays"].'" </td>';
                 echo '<td class="align-middle"><button type="submit" onclick="document.getElementById(\'deleteId\').value=' . $id . '" class="btn btn-danger" form="deleteForm">Delete</button></td></tr>';
             }

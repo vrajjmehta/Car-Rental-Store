@@ -9,13 +9,13 @@
 <body onload="showCars();">
 <div>
     <div class="container">
-        <input type="text" class="form-control" id="searchInput" placeholder="Search..">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search Cars">
         <div id="searchCar" class="row mt-3">
             <div class="col-md-3 mb-3" v-for="car in cars">
-                <div class="card">
+                <div class="card" style="min-height:600px; ">
                     <img v-bind:src="'static/Images/'+car.Model+'.jpg'" class="card-img-top img-fluid" style="height: 200px;">
                     <div class="card-body" style="padding-top: 0px; padding-bottom: 0px;">
-                        <h5 class="card-title">{{car.Brand}}-{{car.Model}}-{{car.Year}}</h5>
+                        <h6 class="card-title">{{car.Brand}}-{{car.Model}}-{{car.Year}}</h6>
                         <ul class="list-unstyled">
                             <li class="card-text"><b>Mileage: </b>{{car.Mileage}}</li>
                             <li class="card-text"><b>Fuel type: </b>{{car.FuelType}}</li>
@@ -25,7 +25,7 @@
                             <li class="card-text"><b>Description: </b>{{car.Description}}</li>
                         </ul>
                     </div>
-                    <a href="#" v-on:click="addToCart(car.id);" class="btn btn-primary">Add to Cart</a></div>
+                    <a href="#" v-on:click="addCarToCart(car.id);" class="btn btn-primary">Add to Cart</a></div>
             </div>
         </div>
     </div>

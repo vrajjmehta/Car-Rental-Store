@@ -60,8 +60,8 @@ var cars = new Vue({
         window.parent.document.getElementById("mainFrame").style.height = document.body.scrollHeight + "px";
     },
     methods: {
-        addToCart: function (id) {
-            checkAvailability(id);
+        addCarToCart: function (carId) {
+            checkAvailability(carId);
         }
     }
 });
@@ -72,7 +72,7 @@ var cars = new Vue({
  */
 function checkAvailability(id) {
     if (ajax) {
-        ajax.open('get', 'check_availability.php?id=' + id);
+        ajax.open('get', 'car_available.php?id=' + id);
         ajax.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 handleCheck(this);
@@ -84,9 +84,9 @@ function checkAvailability(id) {
 
 function handleCheck(xml) {
     if (xml.responseText == "Y") {
-        alert("Car added to shopping cart successfully.");
+        alert("Add to the cart successfully.");
     } else {
-        alert("Sorry, this Car is not Available now. Please try other cars at the moment.");
+        alert("Sorry, the car is not available now. Please use try other cars.");
     }
 }
 

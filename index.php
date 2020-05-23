@@ -15,9 +15,9 @@
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-light bg-light">
-    <a href="index.php" class="navbar-brand mb-0 h1"><b>Hertz-UTS Car Rental Store</b></a>
-    <a href="car_reserve.php" target="mainFrame" class="btn btn-outline-success my-2 my-sm-0">Car Reservation</a>
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <a href="index.php" class="navbar-brand mb-0 h1"><b>Hertz-UTS Car Rental Store - Vraj Mehta</b></a>
+    <a href="car_reserve.php" target="mainFrame" class="btn btn-primary">Car Reservation</a>
 </nav>
 
 <iframe name="mainFrame" id="mainFrame" frameborder="0" scrolling="no" onload='javascript:resizeIframe(this);'
