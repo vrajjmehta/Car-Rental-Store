@@ -6,7 +6,7 @@
         <Brand>BMW</Brand>
         <Model>320i</Model>
         <Year>2014</Year>
-        <Mileage>15000</Mileage>
+        <Mileage>15000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>155</PricePerDay>
@@ -18,7 +18,7 @@
         <Brand>Toyota</Brand>
         <Model>Camry</Model>
         <Year>2015</Year>
-        <Mileage>18000</Mileage>
+        <Mileage>18000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>115</PricePerDay>
@@ -30,7 +30,7 @@
         <Brand>Holden</Brand>
         <Model>Captiva</Model>
         <Year>2019</Year>
-        <Mileage>23000</Mileage>
+        <Mileage>23000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>170</PricePerDay>
@@ -42,7 +42,7 @@
         <Brand>Jeep</Brand>
         <Model>Cherokee</Model>
         <Year>2015</Year>
-        <Mileage>19000</Mileage>
+        <Mileage>19000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>125</PricePerDay>
@@ -54,7 +54,7 @@
         <Brand>Honda</Brand>
         <Model>Civic</Model>
         <Year>2018</Year>
-        <Mileage>18000</Mileage>
+        <Mileage>18000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>150</PricePerDay>
@@ -66,7 +66,7 @@
         <Brand>Mercedes Benz</Brand>
         <Model>GLC</Model>
         <Year>2017</Year>
-        <Mileage>16000</Mileage>
+        <Mileage>16000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>145</PricePerDay>
@@ -78,7 +78,7 @@
         <Brand>Volkswagen</Brand>
         <Model>Golf</Model>
         <Year>2016</Year>
-        <Mileage>15000</Mileage>
+        <Mileage>15000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>150</PricePerDay>
@@ -90,7 +90,7 @@
         <Brand>Suzuki</Brand>
         <Model>Jimny</Model>
         <Year>2018</Year>
-        <Mileage>14000</Mileage>
+        <Mileage>14000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>155</PricePerDay>
@@ -102,7 +102,7 @@
         <Brand>Hyundai</Brand>
         <Model>Sonata</Model>
         <Year>2013</Year>
-        <Mileage>13000</Mileage>
+        <Mileage>13000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>160</PricePerDay>
@@ -114,10 +114,22 @@
         <Brand>Nissan</Brand>
         <Model>X-trail</Model>
         <Year>2012</Year>
-        <Mileage>9000</Mileage>
+        <Mileage>9000 kms</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>165</PricePerDay>
         <Description>The Nissan X-Trail is a compact crossover SUV produced by the Japanese automaker Nissan since 2000. </Description>
+    </item>
+    <item Category="SUV">
+        <id>1010</id>
+        <Availability>Y</Availability>
+        <Brand>Subaru</Brand>
+        <Model>Forester</Model>
+        <Year>2019</Year>
+        <Mileage>7000 kms</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>195</PricePerDay>
+        <Description>The Subaru Forester is a compact crossover SUV produced by the Japanese automaker Subaru since 1997. </Description>
     </item>
 </cars>

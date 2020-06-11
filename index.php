@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar fixed-top navbar-dark bg-dark">
-    <a href="index.php" class="navbar-brand mb-0 h1"><b>Hertz-UTS Car Rental Store - Vraj Mehta</b></a>
+    <a href="index.php" class="navbar-brand mb-0 h1"><b>Hertz-UTS Car Rental Store</b></a>
     <a href="car_reserve.php" target="mainFrame" class="btn btn-primary">Car Reservation</a>
 </nav>
 

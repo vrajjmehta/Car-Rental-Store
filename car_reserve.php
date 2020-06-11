@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="static/JS/display.js"></script>
     <title>Car Reservation</title>
 </head>
 <body>
@@ -10,6 +11,9 @@
     <?php
     session_start();
     if (empty($_SESSION["cart"])){
+        ?>
+        <body onload="return clear()">
+        <?php
         echo '<div class="container text-center">';
         echo '<h2>The cart is empty. Please select cars to book.</h2>';
         echo '<a href="car_show.php" target="mainFrame" class="btn btn-primary">Back to Home</a></div>';
@@ -39,7 +43,7 @@
 
             echo '</tbody></table>
             <div class="text-right">
-                <button type="submit" form="checkoutForm" class="btn btn-primary">Processing to Checkout</button>
+                <button type="submit" form="checkoutForm" class="btn btn-primary">Proceeding to Checkout</button>
             </div></div></form>';
         }
         ?>

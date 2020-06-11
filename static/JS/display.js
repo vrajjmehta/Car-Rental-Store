@@ -22,7 +22,7 @@ if (!ajax) {
 
 /*
 1. get cars by Ajax
-2. blinding cars with Vue for display
+2. binding cars with Vue JS framework for display
  */
 var carData = [];
 
@@ -46,7 +46,7 @@ function getCars(xml) {
         for (var j = 0; j < carList[i].childNodes.length; j++) {
             carItem[carList[i].childNodes[j].nodeName] = carList[i].childNodes[j].innerHTML;
         }
-        carData.push(carItem);
+        carData.push(carItem);      // Saving as an array
     }
 }
 
@@ -82,11 +82,12 @@ function checkAvailability(id) {
     }
 }
 
+// display message based on the car availablilty
 function handleCheck(xml) {
     if (xml.responseText == "Y") {
         alert("Add to the cart successfully.");
     } else {
-        alert("Sorry, the car is not available now. Please use try other cars.");
+        alert("Sorry, the car is not available now. Please try other cars.");
     }
 }
 
@@ -99,3 +100,8 @@ $(document).ready(function () {
         });
     });
 });
+
+function clear(){
+    alert("No car has been reserved.");
+    document.location.href="/";
+}

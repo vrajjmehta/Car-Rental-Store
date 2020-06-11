@@ -8,7 +8,7 @@
 <body>
 
     <div class="container text-center">
-        <h1>Sent email successfully.</h1>
+        <h1>Email sent successfully.</h1>
         <a href="car_show.php" target="mainFrame" class="btn btn-secondary">Back</a>
     </div>
 
@@ -23,27 +23,23 @@ ini_set('smtp_port',465);
 // Send email
 $to = $_REQUEST['emailAddr'];
 $subject = 'Your Order Details';
-$message = '<h5>This is a confirmation email of your order.</h5>
-            <h5>Thanks for renting cars from Hertz-UTS, the total cost is $' . $_SESSION["total"] .
-            '</h5><h6>Details are as follows:</h6>';
+$message = '<h5>Thanks for renting cars from Hertz-UTS, the total cost is $' . $_SESSION["total"] .
+            '</h5><h5>Details are as follows:</h5>';
 
 foreach ($_SESSION["cart"] as $id => $item) {
     $message .= 'Model: '.$item["Brand"].'-'.$item['Model'].'-'.$item['Year'];
-    $message .= '<br>Mileage: ' . $item["Mileage"] . ' kms';
-    $message .= '<br>Fuel Type: ' . $item['FuelType'];
-    $message .= '<br>Seats: ' . $item['Seats'];
-    $message .= '<br>Price Per Day: $' . $item['PricePerDay'];
-    $message .= '<br>Rent Days: ' . $item['RentalDays'];
-    $message .= '<br>Description: ' . $item['Description'];
+    $message .= '<br>mileage: ' . $item["Mileage"] . ' kms';
+    $message .= '<br>fuel_type: ' . $item['FuelType'];
+    $message .= '<br>seats: ' . $item['Seats'];
+    $message .= '<br>price_per_day: $' . $item['PricePerDay'];
+    $message .= '<br>rent_days: ' . $item['RentalDays'];
+    $message .= '<br>description: ' . $item['Description'];
     $message .= '<br><br>';
 }
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-//// More headers
-$headers .= 'From:13488642@student.uts.edu.au' . "\r\n";
 
 mail($to, $subject, $message, $headers);
 
